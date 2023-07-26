@@ -13,6 +13,8 @@ jobs:
       uses: gradle/gradle-build-action@v2.4.2
     - name: Run build with gradle wrapper
       run: ./gradlew build
+      env:
+        GITHUB_TOKEN: ${{ secrets.BUILD_TOKEN }}
     - name: Publish test report
       uses: mikepenz/action-junit-report@v3
       with:
