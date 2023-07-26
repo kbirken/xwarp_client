@@ -1,0 +1,13 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+gradle/
+
+# Ignore Gradle build output directory
+app/build/
+
+# Ignore gradle.properties file which might contain credentials
+gradle.properties
+
+# Ignore VSCode stuff
+app/bin/
+.vscode/
