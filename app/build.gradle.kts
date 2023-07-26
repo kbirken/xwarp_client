@@ -19,7 +19,7 @@ repositories {
     maven {
         url = uri("https://maven.pkg.github.com/kbirken/xwarp")
         credentials {
-            username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_USERNAME")
+            username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_USER")
             password = project.findProperty("gpr.token") as String? ?: System.getenv("GITHUB_TOKEN")
         }
     }    
