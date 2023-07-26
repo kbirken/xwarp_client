@@ -31,7 +31,7 @@ dependencies {
 
     // dependencies used by the application
     implementation("com.google.guava:guava:30.1.1-jre")
-    implementation("org.nanosite.xwarp:xwarp:0.9.0-SNAPSHOT")
+    implementation("org.nanosite.xwarp:xwarp:1.0.0-SNAPSHOT")
 }
 
 application {
