@@ -16,13 +16,11 @@ import org.nanosite.xwarp.simulation.WSimulator;
 import org.nanosite.xwarp.result.ISimResult;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
+    public static void main(String[] args) {
+        new App().runSimulation();
     }
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-
+    public int runSimulation() {
         ModelBuilder builder = new ModelBuilder(ModelBuilder.Unit.MILLISECONDS);
         IModel model = builder.model();
         IProcessor proc = builder.processor("Proc1");
@@ -46,5 +44,8 @@ public class App {
         WSimulator sim = new WSimulator(new WLogger(2));
         ISimResult result = sim.simulate(model);
         result.dump();
+
+        return result.getNIterations();
     }
+
 }
